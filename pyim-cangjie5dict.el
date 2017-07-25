@@ -65,4 +65,3 @@
 (provide 'pyim-cangjie5dict)
 
 ;;; pyim-wbdict.el ends here
-;; #+END_SRC
