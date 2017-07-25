@@ -1,12 +1,12 @@
-;;; chinese-pyim-cangjie5dict.el --- Some cangjie5 dicts for chinese-pyim
+;;; pyim-cangjie5dict.el --- Some cangjie5 dicts for pyim
 
 ;; * Header
 ;; Copyright (C) 2017 Yuanchen Xie <yuanchen.gm@gmail.com>
 
 ;; Author: Yuanchen Xie <yuanchen.gm@gmail.com>
-;; URL: https://github.com/erstern/chinese-pyim-cangjie5dict
+;; URL: https://github.com/erstern/pyim-cangjie5dict
 ;; Version: 0.0.1
-;; Package-Requires: ((chinese-pyim "1.0"))
+;; Package-Requires: ((pyim "1.0"))
 ;; Keywords: convenience, Chinese, pinyin, input-method, complete
 
 ;;; License:
@@ -29,43 +29,40 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Commentary:
-;; * chinese-pyim-wbdict README                         :README:doc:
+;; * pyim-wbdict README                         :README:doc:
 
 ;; ** 简介
-;; chinese-pyim-cangjie5dict 是 chinese-pyim 的一个倉頡五代词库，修改自 RIME 项目。源于《五倉世紀》。
+;; pyim-cangjie5dict 是 pyim 的一个倉頡五代词库，修改自 RIME 项目。源于《五倉世紀》。
 
 ;; ** 安装和使用
 ;; 1. 配置melpa源，参考：http://melpa.org/#/getting-started
-;; 2. M-x package-install RET chinese-pyim-wbdict RET
+;; 2. M-x package-install RET pyim-wbdict RET
 ;; 3. 在emacs配置文件中（比如: ~/.emacs）添加如下代码：
 ;;    #+BEGIN_EXAMPLE
-;;    (require 'chinese-pyim-wbdict)
-;;    (chinese-pyim-wbdict-gb2312-enable) ; gb2312 version
-;;    ;; (chinese-pyim-wbdict-gbk-enable) ; gbk version
+;;    (require 'pyim-wbdict)
+;;    (pyim-wbdict-gb2312-enable) ; gb2312 version
+;;    ;; (pyim-wbdict-gbk-enable) ; gbk version
 ;;    #+END_EXAMPLE
 
 ;;; Code:
 ;; * 代码                                                               :code:
-;; #+BEGIN_SRC emacs-lisp
 
 ;;;###autoload
-(defun chinese-pyim-cangjie5-enable ()
-  "Add cangjie5 dict to chinese-pyim."
+(defun pyim-cangjie5-enable ()
+  "Add cangjie5 dict to pyim."
   (interactive)
   (let* ((dir (file-name-directory
-               (locate-library "chinese-pyim-cangjie5dict.el")))
+               (locate-library "pyim-cangjie5dict.el")))
          (file (concat dir "pyim-cangjie5.pyim")))
     (when (file-exists-p file)
-      (if (featurep 'chinese-pyim)
+      (if (featurep 'pyim)
           (pyim-extra-dicts-add-dict
            `(:name "cangjie5-elpa" :file ,file :elpa t))
-        (message "Chinese-pyim 没有安装，chinese-pyim-cangjie5dict 启用失败。")))))
-;; #+END_SRC
+        (message "pyim 没有安装，pyim-cangjie5dict 启用失败。")))))
 
 ;; * Footer
 
-;; #+BEGIN_SRC emacs-lisp
-(provide 'chinese-pyim-cangjie5dict)
+(provide 'pyim-cangjie5dict)
 
-;;; chinese-pyim-wbdict.el ends here
+;;; pyim-wbdict.el ends here
 ;; #+END_SRC
