@@ -52,7 +52,7 @@
   (interactive)
   (let* ((dir (file-name-directory
                (locate-library "pyim-cangjie5dict.el")))
-         (file (concat dir "pyim-cangjie5.pyim")))
+         (file (concat dir "pyim-cangjie5dict.pyim")))
     (when (file-exists-p file)
       (if (featurep 'pyim)
           (pyim-extra-dicts-add-dict
