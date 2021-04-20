@@ -47,7 +47,7 @@
 ;; * 代码                                                               :code:
 
 ;;;###autoload
-(defun pyim-cangjie5-enable ()
+(defun pyim-cangjie5dict-enable ()
   "Add cangjie5 dict to pyim."
   (interactive)
   (let* ((dir (file-name-directory
