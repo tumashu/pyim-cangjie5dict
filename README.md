@@ -1,14 +1,34 @@
-### pyim-cangjie5dict ###
+Note: this file is auto converted from pyim-cangjie5dict.el by [el2org](https://github.com/tumashu/el2org), please do not edit it by hand!!!
+
+
+# &#30446;&#24405;
+
+1.  [pyim-cangjie5dict README](#orgd80525c)
+    1.  [简介](#org726aae6)
+    2.  [安装和使用](#orgf140b73)
+
+
+<a id="orgd80525c"></a>
+
+# pyim-cangjie5dict README
+
+
+<a id="org726aae6"></a>
+
+## 简介
 
 pyim-cangjie5dict 是 pyim 的一个倉頡五代词库，修改自 RIME 项目。源于《五倉世紀》。
 
-#### 安装与使用 ####
 
-1. 配置 melpa 源，可参考[ELPA 镜像](https://elpa.emacs-china.org/)
-2. 安装 pyim 及本词库（M-x `package-install` RET `pyim-smzmdict` RET）；
-3. 在 .emacs 中加入如下代码以启用：
+<a id="orgf140b73"></a>
 
-```elisp
-(require 'pyim-cangjie5dict)
-(pyim-cangjie5dict-enable)
-```
+## 安装和使用
+
+1.  配置melpa源，参考：<http://melpa.org/#/getting-started>
+2.  M-x package-install RET pyim-cangjie5dict RET
+3.  在emacs配置文件中（比如: ~/.emacs）添加如下代码：
+    
+        (require 'pyim-cangjie5dict)
+        (pyim-cangjie5dict-enable)
+        (setq pyim-default-scheme 'cangjie)
+

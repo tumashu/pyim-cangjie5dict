@@ -6,7 +6,7 @@
 ;; Author: Yuanchen Xie <yuanchen.gm@gmail.com>
 ;; URL: https://github.com/erstern/pyim-cangjie5dict
 ;; Version: 0.0.1
-;; Package-Requires: ((pyim "1.0"))
+;; Package-Requires: ((pyim "3.7"))
 ;; Keywords: convenience, Chinese, pinyin, input-method, complete
 
 ;;; License:
@@ -41,10 +41,23 @@
 ;;    #+BEGIN_EXAMPLE
 ;;    (require 'pyim-cangjie5dict)
 ;;    (pyim-cangjie5dict-enable)
+;;    (setq pyim-default-scheme 'cangjie)
 ;;    #+END_EXAMPLE
 
 ;;; Code:
 ;; * 代码                                                               :code:
+(require 'pyim)
+
+(pyim-scheme-add
+ '(cangjie
+   :document "倉頡输入法。"
+   :class xingma
+   :first-chars "abcdefghijklmnopqrstuvwxyz"
+   :rest-chars "abcdefghijklmnopqrstuvwxyz"
+   :code-prefix "cangjie/" ;仓颉输入法词库中所有的 code 都以 "cangjie/" 开头，防止词库冲突。
+   :code-split-length 5 ;默认将用户输入切成 5 个字符长的 code 列表（不计算 code-prefix）
+   :code-maximum-length 5 ;仓颉词库中，code 的最大长度（不计算 code-prefix）
+   :prefer-triggers nil))
 
 ;;;###autoload
 (defun pyim-cangjie5dict-enable ()
