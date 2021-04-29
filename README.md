@@ -1,27 +1,27 @@
-Note: this file is auto converted from pyim-cangjie5dict.el by [el2org](https://github.com/tumashu/el2org), please do not edit it by hand!!!
+Note: this file is auto converted from pyim-cangjiedict.el by [el2org](https://github.com/tumashu/el2org), please do not edit it by hand!!!
 
-- [pyim-cangjie5dict README](#org304fdc8)
-  - [简介](#orgc5661be)
-  - [安装和使用](#org1155c7a)
-
-
-<a id="org304fdc8"></a>
-
-# pyim-cangjie5dict README
+- [pyim-cangjiedict README](#orgfdac9ef)
+  - [简介](#org60736e5)
+  - [安装和使用](#org420eb51)
 
 
-<a id="orgc5661be"></a>
+<a id="orgfdac9ef"></a>
+
+# pyim-cangjiedict README
+
+
+<a id="org60736e5"></a>
 
 ## 简介
 
-pyim-cangjie5dict 是 pyim 的一个倉頡输入法词库。
+pyim-cangjiedict 是 pyim 的一个倉頡输入法词库。
 
-第一版词库仅支持倉頡五代，故名称为`pyim-cangjie5dict`，后续加入了六代词库。考虑到 melpa 的使用，暂不更名。
+第一版词库仅支持倉頡五代，故名称为`pyim-cangjie5dict`，后续加入了六代词库，更名为`pyim-cangjiedict`。
 
 其中五代词库修改自 [rime-cangjie](https://github.com/rime/rime-cangjie) 项目。源于《五倉世紀》。 六代（蒼頡檢字法）词库修改自 [rime-cangjie6](https://github.com/rime-aca/rime-cangjie6) 项目。
 
 
-<a id="org1155c7a"></a>
+<a id="org420eb51"></a>
 
 ## 安装和使用
 

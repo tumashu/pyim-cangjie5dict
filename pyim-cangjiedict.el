@@ -1,10 +1,10 @@
-;;; pyim-cangjie5dict.el --- Some cangjie5 dicts for pyim
+;;; pyim-cangjiedict.el --- Some cangjie dicts for pyim
 
 ;; * Header
 ;; Copyright (C) 2017 Yuanchen Xie <yuanchen.gm@gmail.com>
 
 ;; Author: Yuanchen Xie <yuanchen.gm@gmail.com>
-;; URL: https://github.com/erstern/pyim-cangjie5dict
+;; URL: https://github.com/p1uxtar/pyim-cangjiedict
 ;; Version: 0.0.1
 ;; Package-Requires: ((pyim "3.7"))
 ;; Keywords: convenience, Chinese, pinyin, input-method, complete
@@ -29,12 +29,12 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Commentary:
-;; * pyim-cangjie5dict README                         :README:doc:
+;; * pyim-cangjiedict README                         :README:doc:
 ;;
 ;; ** 简介
-;; pyim-cangjie5dict 是 pyim 的一个倉頡输入法词库。
+;; pyim-cangjiedict 是 pyim 的一个倉頡输入法词库。
 ;;
-;; 第一版词库仅支持倉頡五代，故名称为=pyim-cangjie5dict=，后续加入了六代词库。考虑到 melpa 的使用，暂不更名。
+;; 第一版词库仅支持倉頡五代，故名称为=pyim-cangjie5dict=，后续加入了六代词库，更名为=pyim-cangjiedict=。
 ;;
 ;; 其中五代词库修改自 [[https://github.com/rime/rime-cangjie][rime-cangjie]] 项目。源于《五倉世紀》。
 ;; 六代（蒼頡檢字法）词库修改自 [[https://github.com/rime-aca/rime-cangjie6][rime-cangjie6]] 项目。
