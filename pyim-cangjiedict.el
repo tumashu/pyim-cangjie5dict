@@ -96,4 +96,4 @@
 
 (provide 'pyim-cangjie5dict)
 
-;;; pyim-cangjie5dict.el ends here
+;;; pyim-cangjiedict.el ends here
