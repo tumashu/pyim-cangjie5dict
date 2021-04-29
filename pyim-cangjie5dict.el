@@ -30,20 +30,27 @@
 
 ;;; Commentary:
 ;; * pyim-cangjie5dict README                         :README:doc:
-
+;;
 ;; ** 简介
-;; pyim-cangjie5dict 是 pyim 的一个倉頡五代词库，修改自 RIME 项目。源于《五倉世紀》。
-
+;; pyim-cangjie5dict 是 pyim 的一个倉頡输入法词库。
+;;
+;; 第一版词库仅支持倉頡五代，故名称为=pyim-cangjie5dict=，后续加入了六代词库。考虑到 melpa 的使用，暂不更名。
+;;
+;; 其中五代词库修改自 [[https://github.com/rime/rime-cangjie][rime-cangjie]] 项目。源于《五倉世紀》。
+;; 六代（蒼頡檢字法）词库修改自 [[https://github.com/rime-aca/rime-cangjie6][rime-cangjie6]] 项目。
+;;
 ;; ** 安装和使用
 ;; 1. 配置melpa源，参考：http://melpa.org/#/getting-started
 ;; 2. M-x package-install RET pyim-cangjie5dict RET
 ;; 3. 在emacs配置文件中（比如: ~/.emacs）添加如下代码：
 ;;    #+BEGIN_EXAMPLE
 ;;    (require 'pyim-cangjie5dict)
-;;    (pyim-cangjie5dict-enable)
 ;;    (setq pyim-default-scheme 'cangjie)
+;;    ;; 以下命令可任选其一：
+;;    ;; (pyim-cangjie5dict-enable) ;; 启用五代词库
+;;    ;; (pyim-cangjie6dict-enable) ;; 启用六代词库
 ;;    #+END_EXAMPLE
-
+;;
 ;;; Code:
 ;; * 代码                                                               :code:
 (require 'pyim)
@@ -70,6 +77,19 @@
       (if (featurep 'pyim)
           (pyim-extra-dicts-add-dict
            `(:name "cangjie5-elpa" :file ,file :elpa t))
+        (message "pyim 没有安装，pyim-cangjie5dict 启用失败。")))))
+
+;;;###autoload
+(defun pyim-cangjie6dict-enable ()
+  "Add cangjie6 dict to pyim."
+  (interactive)
+  (let* ((dir (file-name-directory
+               (locate-library "pyim-cangjie6dict.el")))
+         (file (concat dir "pyim-cangjie6dict.pyim")))
+    (when (file-exists-p file)
+      (if (featurep 'pyim)
+          (pyim-extra-dicts-add-dict
+           `(:name "cangjie6-elpa" :file ,file :elpa t))
         (message "pyim 没有安装，pyim-cangjie5dict 启用失败。")))))
 
 ;; * Footer
