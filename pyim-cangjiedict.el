@@ -62,6 +62,7 @@
    :first-chars "abcdefghijklmnopqrstuvwxyz"
    :rest-chars "abcdefghijklmnopqrstuvwxyz"
    :code-prefix "cangjie/" ;仓颉输入法词库中所有的 code 都以 "cangjie/" 开头，防止词库冲突。
+   :code-prefix-history ("@") ;仓颉输入法词库曾经使用过的 code-prefix
    :code-split-length 5 ;默认将用户输入切成 5 个字符长的 code 列表（不计算 code-prefix）
    :code-maximum-length 5 ;仓颉词库中，code 的最大长度（不计算 code-prefix）
    :prefer-triggers nil))
