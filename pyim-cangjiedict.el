@@ -94,6 +94,6 @@
 
 ;; * Footer
 
-(provide 'pyim-cangjie5dict)
+(provide 'pyim-cangjiedict)
 
 ;;; pyim-cangjiedict.el ends here
