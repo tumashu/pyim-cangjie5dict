@@ -44,7 +44,7 @@
 ;; 2. M-x package-install RET pyim-cangjie5dict RET
 ;; 3. 在emacs配置文件中（比如: ~/.emacs）添加如下代码：
 ;;    #+BEGIN_EXAMPLE
-;;    (require 'pyim-cangjie5dict)
+;;    (require 'pyim-cangjiedict)
 ;;    (setq pyim-default-scheme 'cangjie)
 ;;    ;; 以下命令可任选其一：
 ;;    ;; (pyim-cangjie5dict-enable) ;; 启用五代词库
