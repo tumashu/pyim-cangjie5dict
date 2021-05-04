@@ -1,4 +1,4 @@
-;;; pyim-cangjiedict.el --- Some cangjie dicts for pyim
+;;; pyim-cangjie5dict.el --- Some cangjie dicts for pyim
 
 ;; * Header
 ;; Copyright (C) 2017 Yuanchen Xie <yuanchen.gm@gmail.com>
@@ -36,4 +36,4 @@
 ;; * Footer
 (provide 'pyim-cangjie5dict)
 
-;;; pyim-cangjiedict.el ends here
+;;; pyim-cangjie5dict.el ends here
