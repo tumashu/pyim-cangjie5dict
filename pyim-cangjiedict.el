@@ -72,7 +72,7 @@
   "Add cangjie5 dict to pyim."
   (interactive)
   (let* ((dir (file-name-directory
-               (locate-library "pyim-cangjie5dict.el")))
+               (locate-library "pyim-cangjiedict.el")))
          (file (concat dir "pyim-cangjie5dict.pyim")))
     (when (file-exists-p file)
       (if (featurep 'pyim)
@@ -85,13 +85,13 @@
   "Add cangjie6 dict to pyim."
   (interactive)
   (let* ((dir (file-name-directory
-               (locate-library "pyim-cangjie6dict.el")))
+               (locate-library "pyim-cangjiedict.el")))
          (file (concat dir "pyim-cangjie6dict.pyim")))
     (when (file-exists-p file)
       (if (featurep 'pyim)
           (pyim-extra-dicts-add-dict
            `(:name "cangjie6-elpa" :file ,file :elpa t))
-        (message "pyim 没有安装，pyim-cangjie5dict 启用失败。")))))
+        (message "pyim 没有安装，pyim-cangjie6dict 启用失败。")))))
 
 ;; * Footer
 
