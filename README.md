@@ -1,36 +1,44 @@
 Note: this file is auto converted from pyim-cangjiedict.el by [el2org](https://github.com/tumashu/el2org), please do not edit it by hand!!!
 
-- [pyim-cangjiedict README](#orgfdac9ef)
-  - [简介](#org60736e5)
-  - [安装和使用](#org420eb51)
+- [pyim-cangjiedict README](#org2d86806)
+  - [簡介(Introduction)](#org2427508)
+  - [安裝和使用(Installation)](#org77d29b1)
 
 
-<a id="orgfdac9ef"></a>
+<a id="org2d86806"></a>
 
 # pyim-cangjiedict README
 
 
-<a id="org60736e5"></a>
+<a id="org2427508"></a>
 
-## 简介
+## 簡介(Introduction)
 
-pyim-cangjiedict 是 pyim 的一个倉頡输入法词库。
+pyim-cangjiedict 是 pyim 的一個倉頡輸入法詞庫。
 
-第一版词库仅支持倉頡五代，故名称为`pyim-cangjie5dict`，后续加入了六代词库，更名为`pyim-cangjiedict`。
+pyim-cangjiedict is a dict of Cangjie input scheme for [pyim](<https://github.com/tumashu/pyim>).
 
-其中五代词库修改自 [rime-cangjie](https://github.com/rime/rime-cangjie) 项目。源于《五倉世紀》。 六代（蒼頡檢字法）词库修改自 [rime-cangjie6](https://github.com/rime-aca/rime-cangjie6) 项目。
+第一版詞庫僅支持倉頡五代，故名稱爲`pyim-cangjie5dict`，後續加入了六代詞庫，更名爲`pyim-cangjiedict`。
+
+The first version of the project only supported the Cangjie v5, so the name is `pyim-cangjie5dict`, and version 6th was subsequently added and renamed `pyim-cangjiedict`.
+
+其中五代詞庫修改自 [rime-cangjie](https://github.com/rime/rime-cangjie) 項目，源於《五倉世紀》。
+
+六代（蒼頡檢字法）詞庫修改自 [rime-cangjie6](https://github.com/rime-aca/rime-cangjie6) 項目。
+
+The cangjie5dict is modified from the [rime-cangjie](https://github.com/rime/rime-cangjie) project. And the cangjie6dict is modified from the [rime-cangjie6](https://github.com/rime-aca/rime-cangjie6) project.
 
 
-<a id="org420eb51"></a>
+<a id="org77d29b1"></a>
 
-## 安装和使用
+## 安裝和使用(Installation)
 
-1.  配置melpa源，参考：<http://melpa.org/#/getting-started>
-2.  M-x package-install RET pyim-cangjie5dict RET
-3.  在emacs配置文件中（比如: ~/.emacs）添加如下代码：
+1.  配置melpa源，參考：<http://melpa.org/#/getting-started>
+2.  M-x package-install RET pyim-cangjiedict RET
+3.  在emacs配置文件中（比如: ~/.emacs）添加如下代碼：
 
-        (require 'pyim-cangjie5dict)
+        (require 'pyim-cangjiedict)
         (setq pyim-default-scheme 'cangjie)
-        ;; 以下命令可任选其一：
-        ;; (pyim-cangjie5dict-enable) ;; 启用五代词库
-        ;; (pyim-cangjie6dict-enable) ;; 启用六代词库
+        ;; 以下命令可任選其一：
+        ;; (pyim-cangjie5dict-enable) ;; 啓用五代詞庫(Enable cangjie5)
+        ;; (pyim-cangjie6dict-enable) ;; 啓用六代詞庫(Enable cangjie6)

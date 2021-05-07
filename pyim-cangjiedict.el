@@ -31,40 +31,48 @@
 ;;; Commentary:
 ;; * pyim-cangjiedict README                         :README:doc:
 ;;
-;; ** 简介
-;; pyim-cangjiedict 是 pyim 的一个倉頡输入法词库。
+;; ** 簡介(Introduction)
+;; pyim-cangjiedict 是 pyim 的一個倉頡輸入法詞庫。
 ;;
-;; 第一版词库仅支持倉頡五代，故名称为=pyim-cangjie5dict=，后续加入了六代词库，更名为=pyim-cangjiedict=。
+;; pyim-cangjiedict is a dict of Cangjie input scheme for [pyim](https://github.com/tumashu/pyim).
 ;;
-;; 其中五代词库修改自 [[https://github.com/rime/rime-cangjie][rime-cangjie]] 项目。源于《五倉世紀》。
-;; 六代（蒼頡檢字法）词库修改自 [[https://github.com/rime-aca/rime-cangjie6][rime-cangjie6]] 项目。
+;; 第一版詞庫僅支持倉頡五代，故名稱爲=pyim-cangjie5dict=，後續加入了六代詞庫，更名爲=pyim-cangjiedict=。
 ;;
-;; ** 安装和使用
-;; 1. 配置melpa源，参考：http://melpa.org/#/getting-started
-;; 2. M-x package-install RET pyim-cangjie5dict RET
-;; 3. 在emacs配置文件中（比如: ~/.emacs）添加如下代码：
+;; The first version of the project only supported the Cangjie v5, so the name is =pyim-cangjie5dict=, and version 6th was subsequently added and renamed =pyim-cangjiedict=.
+;;
+;; 其中五代詞庫修改自 [[https://github.com/rime/rime-cangjie][rime-cangjie]] 項目，源於《五倉世紀》。
+;;
+;; 六代（蒼頡檢字法）詞庫修改自 [[https://github.com/rime-aca/rime-cangjie6][rime-cangjie6]] 項目。
+;;
+;; The cangjie5dict is modified from the [[https://github.com/rime/rime-cangjie][rime-cangjie]] project.
+;; And the cangjie6dict is modified from the [[https://github.com/rime-aca/rime-cangjie6][rime-cangjie6]] project.
+;;
+;; ** 安裝和使用(Installation)
+;; 1. 配置melpa源，參考：http://melpa.org/#/getting-started
+;; 2. M-x package-install RET pyim-cangjiedict RET
+;; 3. 在emacs配置文件中（比如: ~/.emacs）添加如下代碼：
 ;;    #+BEGIN_EXAMPLE
 ;;    (require 'pyim-cangjiedict)
 ;;    (setq pyim-default-scheme 'cangjie)
-;;    ;; 以下命令可任选其一：
-;;    ;; (pyim-cangjie5dict-enable) ;; 启用五代词库
-;;    ;; (pyim-cangjie6dict-enable) ;; 启用六代词库
+;;    ;; 以下命令可任選其一：
+;;    ;; (pyim-cangjie5dict-enable) ;; 啓用五代詞庫(Enable cangjie5)
+;;    ;; (pyim-cangjie6dict-enable) ;; 啓用六代詞庫(Enable cangjie6)
 ;;    #+END_EXAMPLE
 ;;
 ;;; Code:
-;; * 代码                                                               :code:
+;; * 代碼                                                               :code:
 (require 'pyim)
 
 (pyim-scheme-add
  '(cangjie
-   :document "倉頡输入法。"
+   :document "倉頡輸入法。"
    :class xingma
    :first-chars "abcdefghijklmnopqrstuvwxyz"
    :rest-chars "abcdefghijklmnopqrstuvwxyz"
-   :code-prefix "cangjie/" ;仓颉输入法词库中所有的 code 都以 "cangjie/" 开头，防止词库冲突。
-   :code-prefix-history ("@") ;仓颉输入法词库曾经使用过的 code-prefix
-   :code-split-length 5 ;默认将用户输入切成 5 个字符长的 code 列表（不计算 code-prefix）
-   :code-maximum-length 5 ;仓颉词库中，code 的最大长度（不计算 code-prefix）
+   :code-prefix "cangjie/" ;倉頡輸入法詞庫中所有的 code 都以 "cangjie/" 開頭，防止詞庫衝突。
+   :code-prefix-history ("@") ;倉頡輸入法詞庫曾經使用過的 code-prefix
+   :code-split-length 5 ;默認將用戶輸入切成 5 個字符長的 code 列表（不計算 code-prefix）
+   :code-maximum-length 5 ;倉頡詞庫中，code 的最大長度（不計算 code-prefix）
    :prefer-triggers nil))
 
 ;;;###autoload
@@ -78,7 +86,7 @@
       (if (featurep 'pyim)
           (pyim-extra-dicts-add-dict
            `(:name "cangjie5-elpa" :file ,file :elpa t))
-        (message "pyim 没有安装，pyim-cangjie5dict 启用失败。")))))
+        (message "pyim 沒有安裝，pyim-cangjie5dict 啓用失敗。")))))
 
 ;;;###autoload
 (defun pyim-cangjie6dict-enable ()
@@ -91,7 +99,7 @@
       (if (featurep 'pyim)
           (pyim-extra-dicts-add-dict
            `(:name "cangjie6-elpa" :file ,file :elpa t))
-        (message "pyim 没有安装，pyim-cangjie6dict 启用失败。")))))
+        (message "pyim 沒有安裝，pyim-cangjie6dict 啓用失敗。")))))
 
 ;; * Footer
 
