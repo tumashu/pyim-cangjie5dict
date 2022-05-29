@@ -65,7 +65,8 @@
 ;;
 ;;; Code:
 ;; * 代碼                                                               :code:
-(require 'pyim)
+(require 'pyim-dict)
+(require 'pyim-scheme)
 
 (pyim-scheme-add
  '(cangjie
@@ -87,7 +88,7 @@
                (locate-library "pyim-cangjiedict.el")))
          (file (concat dir "pyim-cangjie3dict.pyim")))
     (when (file-exists-p file)
-      (if (featurep 'pyim)
+      (if (featurep 'pyim-dict)
           (pyim-extra-dicts-add-dict
            `(:name "cangjie3-elpa" :file ,file :elpa t))
         (message "pyim 沒有安裝，pyim-cangjie3dict 啓用失敗。")))))
@@ -100,7 +101,7 @@
                (locate-library "pyim-cangjiedict.el")))
          (file (concat dir "pyim-cangjie5dict.pyim")))
     (when (file-exists-p file)
-      (if (featurep 'pyim)
+      (if (featurep 'pyim-dict)
           (pyim-extra-dicts-add-dict
            `(:name "cangjie5-elpa" :file ,file :elpa t))
         (message "pyim 沒有安裝，pyim-cangjie5dict 啓用失敗。")))))
@@ -113,7 +114,7 @@
                (locate-library "pyim-cangjiedict.el")))
          (file (concat dir "pyim-cangjie6dict.pyim")))
     (when (file-exists-p file)
-      (if (featurep 'pyim)
+      (if (featurep 'pyim-dict)
           (pyim-extra-dicts-add-dict
            `(:name "cangjie6-elpa" :file ,file :elpa t))
         (message "pyim 沒有安裝，pyim-cangjie6dict 啓用失敗。")))))
