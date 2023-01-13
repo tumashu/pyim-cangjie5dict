@@ -5,7 +5,7 @@
 
 ;; Author: Yuanchen Xie <yuanchen.gm@gmail.com>
 ;; URL: https://github.com/p1uxtar/pyim-cangjiedict
-;; Version: 0.0.1
+;; Version: 0.1.0
 ;; Package-Requires: ((pyim "3.7"))
 ;; Keywords: convenience, Chinese, pinyin, input-method, complete
 
